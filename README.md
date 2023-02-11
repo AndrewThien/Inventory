@@ -31,7 +31,7 @@ Choose an option as desired and follow the prompted instructions to achieve the 
 
 
 ### Note: 
-The program will read the date from the file named 'inventory.txt'. The format of the product data has to be the same with the format in the example file in the repo.
+The program will read the data from the file named 'inventory.txt' and the format of the product data has to be the same with the format in the example file inventory.txt in the repo.
 
 ## Contributing <a name="contributing"/>
 
