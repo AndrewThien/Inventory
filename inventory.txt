@@ -24,9 +24,7 @@ South Korea,SKU66734,Hyperdunk,1899,7
 Australia,SKU71827,Zoom Hyperfuse,1400,15
 France,SKU20394,Eric Koston 1,2322,17
 Vietnam,SKU2121513,Shoes,201,212
-Vietnam,SKU999,Shoes1,21,321
 Slovakia,SKU11111,Shoe 1,230,21
 Slovakia,SK852654,myshoes,15,10
 Vietnam,SKU9191,Thienko,200,26
 Hungary,SKU1515,Ivanka,20000,98
-Vietnam,SKUNEW,NEWSHOES,100,100
