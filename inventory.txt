@@ -29,3 +29,4 @@ Slovakia,SKU11111,Shoe 1,230,21
 Slovakia,SK852654,myshoes,15,10
 Vietnam,SKU9191,Thienko,200,26
 Hungary,SKU1515,Ivanka,20000,98
+Vietnam,SKUNEW,NEWSHOES,100,100

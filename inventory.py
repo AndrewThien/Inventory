@@ -78,7 +78,7 @@ def read_shoes_data():
         shoe_list.append(Shoe(country_list[i], code_list[i], product_list[i], cost_list[i], quantity_list[i]))
 
 # Function that can be used to append a new shoe object using passed parameters
-def capture_shoes(country, code, product, cost, quantity):
+def add_shoes(country, code, product, cost, quantity):
 
     # Append to the shoe list a Shoe object with passed parameters
     shoe_list.append(Shoe(country, code, product, cost, quantity))
@@ -286,7 +286,7 @@ Your choice: (Please enter the choice's index) """)
             except ValueError:
                 print("\nYou have put an invalid number. Try again.\n")
         # Add the new product using capture shoes function
-        capture_shoes(new_country,new_code,new_product,new_cost,new_quantity)
+        add_shoes(new_country,new_code,new_product,new_cost,new_quantity)
         print("\n***************\n")
     # Option 3: Search info a bout a product
     elif user_choice == "3":
