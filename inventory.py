@@ -228,13 +228,41 @@ def highest_qty():
             print(i)
 
     print("\n***************\n")
+    
+def delete_shoe(code_check):
+    # Create a list of code by reading again data from the shoe list
+    code_list = [i.code for i in shoe_list]  
+
+    # Checking the conditions and print out the result
+    if code_check not in code_list:
+        print("\nSorry! The product with the code you put is not in the inventory. Try again later.\n")
+
+    else:
+        print(f"\nData about the product with the code {code_check} has been deleted.\n")
+        for i in shoe_list:
+            if i.code == code_check:
+                shoe_list.pop(shoe_list.index(i))
+
+    # Recall again the new data about the list of shoes 
+    country_list = [i.country for i in shoe_list]
+    code_list = [i.code for i in shoe_list]
+    product_list = [i.product for i in shoe_list]
+    cost_list = [i.cost for i in shoe_list]
+    quantity_list = [i.quantity for i in shoe_list]
+    
+    # Update the new data without the deleted shoes on inventory.txt file
+    with open("inventory.txt","w") as file:
+        file.write("Country,Code,Product,Cost,Quantity")
+        for i in range(len(country_list)):   
+            file.write(f"\n{country_list[i]},{code_list[i]},{product_list[i]},{cost_list[i]},{quantity_list[i]}")
+            
 #==========Main Menu=============
 # Call the read shoes data function
 read_shoes_data()
 print("Hello! Welcome to stock tracking system.\n")
 # Ask for the user's choice
 user_choice = ""
-while user_choice != "7":
+while user_choice != "8":
     user_choice = input("""What would you like to do?
 1 - View data about all the products
 2 - Add data about a new product
@@ -242,7 +270,8 @@ while user_choice != "7":
 4 - Check the product having the lowest quantity and re-stock
 5 - Check the product having the highest quantity
 6 - See the value of all the products
-7 - Quit
+7 - Delete data about a product
+8 - Quit
 Your choice: (Please enter option's index) """)
     # Option 1: View all the product's data
     if user_choice == "1":
@@ -307,8 +336,13 @@ Your choice: (Please enter the choice's index) """)
     elif user_choice == "6":
         value_per_item()
 
-    # Last options
+    # Option 7: Delete data about a product 
     elif user_choice == "7":
+        code_check = input("Please enter the code of the product that you want to delete: ")
+        delete_shoe(code_check)
+
+    # Last options
+    elif user_choice == "8":
         print("Bye bye!")
     else:
         print("You had a wrong choice. Try again!")
